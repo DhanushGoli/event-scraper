@@ -1,0 +1,11 @@
+# Railway cron service: start, run scrapers, exit.
+# Do not add a healthcheck path. This is not a web app.
+# Schedule is UTC. 0 */6 * * * = every 6 hours.
+
+[build]
+builder = "RAILPACK"
+
+[deploy]
+startCommand = "python run.py all"
+cronSchedule = "0 */6 * * *"
+restartPolicyType = "NEVER"
