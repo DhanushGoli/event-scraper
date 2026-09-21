@@ -1,4 +1,4 @@
-# joinsecret-code
+# event-scraper
 
 Event scrapers, split by task.
 
@@ -38,7 +38,7 @@ Secrets stay in `.env` or Railway variables. Do not commit them.
 
 This is a **cron service**, not a website. Railway starts it on a schedule, it runs all five scrapers, then exits.
 
-1. [Railway](https://railway.app) → New project → Deploy from GitHub → `DhanushGoli/joinsecret-code`.
+1. [Railway](https://railway.app) → New project → Deploy from GitHub → `DhanushGoli/event-scraper`.
 2. Open the service → **Variables** → add every key from `.env.example`.
 3. `railway.toml` already sets:
    - start command: `python run.py all`
